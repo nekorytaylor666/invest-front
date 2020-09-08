@@ -1,0 +1,49 @@
+.input {
+    width: 100%;
+    position: relative;
+    label {
+        color: #3C3D41;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .my-input {
+        width: 100%;
+        border-radius: 6px;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.02);
+        border: 1px solid #ECEBED;
+        background: #FFFFFF;
+        height: 48px;
+        margin-top: 5px;
+        padding: 0 10px;
+        font-size: 16px;
+        &:focus {
+            outline: none;
+        }
+        &.area {
+            height: 220px;
+            padding: 20px 15px;
+            resize: none;
+        }
+    }
+    i {
+        position: absolute;
+        right: 15px;
+        bottom: 11px;
+        color: #D0C9D6;
+        cursor: pointer;
+    }
+    &.left-icon {
+        .my-input {
+            padding-left: 50px;
+        }
+        i {
+            position: absolute;
+            left: 15px;
+            bottom: 11px;
+            color: #D0C9D6;
+            font-size: 24px;
+            width: 24px;
+            cursor: pointer;
+        }
+    }
+}

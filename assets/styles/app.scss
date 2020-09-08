@@ -1,0 +1,21 @@
+.layout {
+    height: auto;
+    .app {
+        display: flex;
+        .view {
+            margin: 130px 30px 30px 330px;
+            width: 100%;
+        }
+    }
+}
+
+.Page {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+@import "input";
+@import "button";
+@import "checkbox";
+@import "sidebar";
+@import "header";
