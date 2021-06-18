@@ -1,5 +1,5 @@
 .Sidebar {
-    min-width: 300px;
+    width: 300px;
     height: 100vh;
     background-color: #333333;
     position: fixed;
@@ -17,7 +17,7 @@
             margin: 0 20px;
             cursor: pointer;
             .avatar {
-                width: 60px;
+                min-width: 60px;
                 height: 60px;
                 border-radius: 50%;
                 background-color: #B1B1B1;
@@ -89,6 +89,12 @@
                     font-weight: normal;
                     font-size: 16px;
                     line-height: 24px;
+                }
+                &.active {
+                    background: #404040;
+                    .item-icon {
+                        color: #FF8900;
+                    }
                 }
                 &:hover {
                     background: #404040;

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt --port 4000",
+    "dev": "nuxt --port 63342",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -12,13 +12,22 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "chart.js": "^2.9.3",
+    "dayjs": "^1.8.35",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-vue": "^6.2.2",
+    "gantt-elastic": "^1.0.11",
+    "gantt-elastic-header": "^0.1.11",
     "node-sass": "^4.14.1",
     "nuxt-edge": "latest",
     "remixicon": "^2.5.0",
     "sass-loader": "^9.0.3",
+    "vue-chartjs": "^3.5.1",
+    "vue-i18n": "^8.22.1",
+    "vue-the-mask": "^0.11.1",
+    "vue2-datepicker": "^3.6.2",
     "vue2-dropzone": "^3.6.0"
   },
   "devDependencies": {
@@ -31,7 +40,7 @@
   },
   "config": {
     "nuxt": {
-      "host": "0.0.0.0",
+      "host": "localhost",
       "port": "3000"
     }
   }

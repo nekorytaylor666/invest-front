@@ -8,20 +8,20 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'static',
+  // target: 'static',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: 'СПК-Инвестор',
+    title: 'СПК-Cарыарка',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'СПК-Инвестор',
+        content: 'СПК-Cарыарка',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -38,13 +38,16 @@ export default {
    ** https://nuxtjs.org/guide/plugins
    */
   plugins: [
-
+    '~/plugins/vue-the-mask',
+    '~/plugins/globalMixins',
+    '~/plugins/disabledLogs',
+    '~/plugins/i18n'
   ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
    */
-  components: true,
+  // components: true,
   /*
    ** Nuxt.js dev-modules
    */
@@ -60,21 +63,29 @@ export default {
     '@nuxtjs/axios',
   ],
   router: {
-    middleware: 'isAuth',
-    base: '/spk-cabinet/'
+    middleware: ['isAuth', 'i18n']
+    // base: '/spk-cabinet/'
   },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: "http://178.170.221.116:7000"
+    baseUrl: process.env.BASE_URL || 'http://localhost:7000',
+
   },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {
+    // terser: {
+    //   terserOptions: {
+    //     compress: {
+    //       pure_funcs: ['console.info', 'console.debug', 'console.warn']
+    //     }
+    //   }
+    // },
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({

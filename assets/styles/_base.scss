@@ -1,0 +1,40 @@
+@font-face{
+    font-family: 'Neo Sans Pro';
+    src: url('../fonts/NeoSansProCyr-Regular.woff2') format('woff2');
+    font-weight: normal;    
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Neo Sans Pro';
+    src: url('../fonts/NeoSansProCyr-Medium.woff2') format('woff2');
+    font-weight: 500;    
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Neo Sans Pro';
+    src: url('../fonts/NeoSansProCyr-Bold.woff2') format('woff2');
+    font-weight: bold;    
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    color: #33333D;
+    font-family: 'Neo Sans Pro';
+}
+
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    outline: none;
+}

@@ -1,0 +1,18 @@
+version: '3.5'
+
+services:
+  front:
+    build: .
+    command: http-server dist
+    #    volumes:
+    #      - "/docker_volumes/spk/backend/documents/:/docs/"
+    networks:
+      - invest_network
+    environment:
+      - 'BASE_URL=b72960593f3d:7000'
+    ports:
+      - '8080'
+
+networks:
+  invest_network:
+    external: true

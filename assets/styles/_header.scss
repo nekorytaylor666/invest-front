@@ -1,13 +1,12 @@
 .Header {
-    position: fixed;
-    top: 0;
-    left: 330px;
-    right: 30px;
-    padding: 40px;
+    width: 1060px;
+    padding: 0 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
+    margin-top: 45px;
+    margin-bottom: 75px;
     .header-logo {
         width: 230px;
         height: 75px;
